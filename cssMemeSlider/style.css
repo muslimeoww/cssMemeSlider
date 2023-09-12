@@ -8,3 +8,31 @@ body {
     background: radial-gradient(circle farthest-side at center center, #f8b9f5 0%, #ffd0eb 100%);
     font-family: "Arial";
 }
+.container {
+    background: #c090ab;
+    width: 100%;
+    max-width: 70em;
+    margin: 0 auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+    box-sizing: border-box;
+  }
+  .slider {
+    width: 100%;
+    height: fit-content;
+    margin: 1.5em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider_pichers {
+    width: 100%;
+    border-radius: 0.5rem;
+    animation-iteration-count: 1;
+    border-radius: 1rem;
+  }
