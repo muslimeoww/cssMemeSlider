@@ -15,19 +15,76 @@ body {
 }
 
 .wrapper-top {
+    display: flex;
     width: 500%;
     height: 90%;
-    display: flex;
+    
 }
 
 input {
     width: 0;
 }
 
+.imager {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .imgara {
     width: 100%;
 }
 
+.imager {
+    width: 16%; 
+    border-radius: 5px; 
+    padding: 2%; 
+   }
+
+
 .wrapper-bottom {
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.labels {
+    display: flex;
+    gap: .5em;
+}
+.label-but {
+    border-radius: 100%;
+    cursor: pointer;
+    padding: .6em;
+    opacity: .6em;
+}
+.label-but:hover {
+    opacity: 1em;
+}
+.labels-dy {
+    height: 1em;
+    width: 1em;
+    border-radius: 100%;
+    background-color: aqua;
+}
+
+#img_one:checked~.one {
+    margin-left: 0%;
+  }
+  
+  #img_two:checked~.one {
+    margin-left: -20%;
+  }
+  
+  #img_three:checked~.one {
+    margin-left: -40%;
+  }
+  
+  #img_four:checked~.one {
+    margin-left: -60%;
+  }
+  
+  #img_five:checked~.one {
+    margin-left: -80%;
+  }
