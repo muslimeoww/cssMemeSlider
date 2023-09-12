@@ -1,13 +1,16 @@
+/* Ключи для анимаций */
 @keyframes slide-animation {
     from {opacity: 0;}
     to {opacity: 1;}
   }
   
-  @keyframes text-animation {
+@keyframes text-animation {
     from {opacity: 0;}
     to {opacity: 1;}
   }
+  /* Настройка тела */
   body {
+    margin-top: 5%;
     margin: 0;
     background: #ffd0eb;
     background: -webkit-radial-gradient(circle farthest-side at center center, #caa5ce 0%, #ffd0eb 100%);
@@ -15,18 +18,24 @@
     background: radial-gradient(circle farthest-side at center center, #f8b9f5 0%, #ffd0eb 100%);
     font-family: "Arial";
 }
+
+.audiom {
+    display: flex;
+}
+
+/* Настройка глав контейнера */
 .container {
     background: #c090ab;
     width: 100%;
-    max-width: 70em;
+    max-width: 90em;
     margin: 0 auto;
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.5em;
-    box-sizing: border-box;
   }
+  /* Картинки */
   .slider {
     width: 100%;
     height: fit-content;
@@ -56,7 +65,7 @@
     height: 1.5em;
   }
 
-
+/* Прячем текст для анимаций */
   #buttons_two {
     transform: translateY(-100%);
   }
@@ -74,17 +83,15 @@
   }
 
   .slider-but {
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 3em;
     font-family: "Arial";
-    color: #fff;
+    color: #ffffff;
     text-align: start;
     opacity: 0;
   }
 
   .slider-text {
     height: 4em;
-    display: block;
   }
 
   .slider-buttons {
@@ -99,11 +106,11 @@
     width: 3em;
     height: 3em;
   }
-
+/* Листатель */
   .gartaem {
-    display: block;
-    width: 30%;
-    height: 30%;
+    display: flex;
+    width: 50%;
+    height: 50%;
     margin: 0 auto;
     border-radius: 50%;
     border: 0.15em solid #fff;
@@ -116,9 +123,40 @@
   
   
   .gartaem:hover {
-    background-color: rgb(123, 189, 227);
-    border: 0.15em solid rgb(123, 189, 227);
+    background-color: rgb(179, 132, 255);
+    border: 0.15em solid rgb(179, 132, 255);
     cursor: pointer;
   }
 
- 
+  
+
+
+/* Настройка анимаций */
+#button_one:checked ~ .slider-text > .slider-buttons > .one > .gartaem,
+#button_two:checked ~ .slider-text > .slider-buttons > .two > .gartaem,
+#button_three:checked ~ .slider-text > .slider-buttons > .three > .gartaem,
+#button_four:checked ~ .slider-text > .slider-buttons > .four > .gartaem,
+#button_five:checked ~ .slider-text > .slider-buttons > .five > .gartaem {
+  background: #a46cc5;
+  transition: background ease-in-out 0.3s;
+}
+
+
+#button_one:checked ~ .slider > #img_one,
+#button_two:checked ~ .slider > #img_two,
+#button_three:checked ~ .slider > #img_three,
+#button_four:checked ~ .slider > #img_four,
+#button_five:checked ~ .slider > #img_five {
+  display: block;
+  animation-name: slide-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#button_one:checked ~ .slider-buttons-text > .slider-text > #buttons_one,
+#button_two:checked ~ .slider-buttons-text > .slider-text > #buttons_two,
+#button_three:checked ~ .slider-buttons-text > .slider-text > #buttons_three,
+#button_four:checked ~ .slider-buttons-text > .slider-text > #buttons_four,
+#button_five:checked ~ .slider-buttons-text > .slider-text > #buttons_five {
+ animation: text-animation 1s ease-in-out 0.8s 1 normal forwards;
+}
