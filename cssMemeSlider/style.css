@@ -1,7 +1,14 @@
-body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+@keyframes slide-animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes text-animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  body {
+    margin: 0;
     background: #ffd0eb;
     background: -webkit-radial-gradient(circle farthest-side at center center, #caa5ce 0%, #ffd0eb 100%);
     background: -moz-radial-gradient(circle farthest-side at center center, #6a4a72 0%, #ffd0eb 100%);
@@ -31,8 +38,23 @@ body {
   }
 
   .slider_pichers {
+    display: none;
     width: 100%;
-    border-radius: 0.5rem;
     animation-iteration-count: 1;
-    border-radius: 1rem;
+
   }
+
+  .slider-buttons-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slider-text {
+    overflow: hidden;
+    height: 1.5em;
+  }
+
+
+ 
