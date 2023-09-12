@@ -57,4 +57,68 @@
   }
 
 
+  #buttons_two {
+    transform: translateY(-100%);
+  }
+  
+  #buttons_three {
+    transform: translateY(-200%);
+  }
+  
+  #buttons_four {
+    transform: translateY(-300%);
+  }
+
+  #buttons_five {
+    transform: translateY(-400%);
+  }
+
+  .slider-but {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Arial";
+    color: #fff;
+    text-align: start;
+    opacity: 0;
+  }
+
+  .slider-text {
+    height: 4em;
+    display: block;
+  }
+
+  .slider-buttons {
+    display: flex;
+  }
+
+  .container input {
+    display: none;
+  }
+
+  .control {
+    width: 3em;
+    height: 3em;
+  }
+
+  .gartaem {
+    display: block;
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 0.15em solid #fff;
+    background-color: #fff;
+  }
+
+  .control:hover {
+    cursor: pointer;
+  }
+  
+  
+  .gartaem:hover {
+    background-color: rgb(123, 189, 227);
+    border: 0.15em solid rgb(123, 189, 227);
+    cursor: pointer;
+  }
+
  
