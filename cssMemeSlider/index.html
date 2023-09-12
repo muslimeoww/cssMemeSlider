@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cssMemeSlider</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
- <div class="conteyner">
-    <div class="slider_meme">
-        <div class="slider_top"></div>
-        <div class="slider_bottom"></div>
+
+    <div class="conteyner">
+        <div class="wrapper-top">
+            <input type="radio" name="buttons-radio" id="img_one" checked>
+            <input type="radio" name="buttons-radio" id="img_two" >
+            <input type="radio" name="buttons-radio" id="img_three" >
+            <input type="radio" name="buttons-radio" id="img_four" >
+            <input type="radio" name="buttons-radio" id="img_five" >
+
+            <div class="imager one"><img src="" alt=""></div>
+            <div class="imager"><img src="" alt=""></div>
+            <div class="imager"><img src="" alt=""></div>
+            <div class="imager"><img src="" alt=""></div>
+            <div class="imager"><img src="" alt=""></div>
+        </div>
+        <div class="wrapper-bottom">
+            <div class="text-buttons">
+                <span class="text-but">1</span>
+                <span class="text-but">2</span>
+                <span class="text-but">3</span>
+                <span class="text-but">4</span>
+                <span class="text-but">5</span>
+            </div>
+            <div class="labels">
+                <label for="img_one" class="label-but"><div class="labels-dy"></div></label>
+                <label for="img_two" class="label-but"><div class="labels-dy"></div></label>
+                <label for="img_three" class="label-but"><div class="labels-dy"></div></label>
+                <label for="img_four" class="label-but"><div class="labels-dy"></div></label>
+                <label for="img_five" class="label-but"><div class="labels-dy"></div></label>
+            </div>
+        </div>
     </div>
- </div>   
+
 </body>
 </html>
