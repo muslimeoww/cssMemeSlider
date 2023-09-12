@@ -2,5 +2,32 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+.conteyner {
+    overflow: hidden;
+    width: 60vw;
+    height: 55vh;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-top {
+    width: 500%;
+    height: 90%;
+    display: flex;
+}
+
+input {
+    width: 0;
+}
+
+.imgara {
+    width: 100%;
+}
+
+.wrapper-bottom {
     
 }
