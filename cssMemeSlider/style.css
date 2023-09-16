@@ -1,0 +1,165 @@
+
+  /* Настройка тела */
+  body {
+    
+    margin: 0;
+    background: #ffd0eb;
+    background: -webkit-radial-gradient(circle farthest-side at center center, #caa5ce 0%, #ffd0eb 100%);
+    background: -moz-radial-gradient(circle farthest-side at center center, #6a4a72 0%, #ffd0eb 100%);
+    background: radial-gradient(circle farthest-side at center center, #f8b9f5 0%, #ffd0eb 100%);
+    font-family: "Arial";
+    
+}
+
+
+
+/* Настройка глав контейнера */
+.container {
+    border-radius: 1.5em;
+    background: #c090ab;
+    width: 100%;
+    max-width: 66em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+  }
+  /* Картинки */
+  .slider {
+    height: 40rem;
+    width: 100%;
+    margin: 1.5em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider_pichers {
+    display: none;
+    width: 100%;
+    animation-iteration-count: 1;
+
+  }
+
+  .slider-buttons-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slider-text {
+    overflow: hidden;
+    height: 1.5em;
+  }
+
+/* Прячем текст для анимаций */
+  #buttons_two {
+    transform: translateY(-100%);
+  }
+  
+  #buttons_three {
+    transform: translateY(-200%);
+  }
+  
+  #buttons_four {
+    transform: translateY(-300%);
+  }
+
+  #buttons_five {
+    transform: translateY(-400%);
+  }
+
+  .slider-but {
+    font-size: 3em;
+    font-family: "Arial";
+    color: #ffffff;
+    text-align: start;
+    opacity: 0;
+  }
+
+  .slider-text {
+    height: 4em;
+  }
+
+  .slider-buttons {
+    display: flex;
+  }
+
+  .container input {
+    display: none;
+  }
+
+  .control {
+    width: 3em;
+    height: 3em;
+  }
+/* Листатель */
+  .gartaem {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 0.15em solid #fff;
+    background-color: #fff;
+  }
+
+  .control:hover {
+    cursor: pointer;
+  }
+  
+
+  .control:active .gartaem {
+    background-color: rgb(100, 40, 197);
+}
+  
+  .gartaem:hover {
+    background-color: rgb(179, 132, 255);
+    border: 0.15em solid rgb(179, 132, 255);
+    cursor: pointer;
+  }
+
+  /* Ключи для анимаций */
+@keyframes slide-animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+@keyframes text-animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+
+/* Настройка анимаций */
+#button_one:checked ~ .slider-text > .slider-buttons > .one > .gartaem,
+#button_two:checked ~ .slider-text > .slider-buttons > .two > .gartaem,
+#button_three:checked ~ .slider-text > .slider-buttons > .three > .gartaem,
+#button_four:checked ~ .slider-text > .slider-buttons > .four > .gartaem,
+#button_five:checked ~ .slider-text > .slider-buttons > .five > .gartaem {
+  background: #a46cc5;
+  transition: background ease-in-out 0.4s;
+}
+
+
+#button_one:checked ~ .slider > #img_one,
+#button_two:checked ~ .slider > #img_two,
+#button_three:checked ~ .slider > #img_three,
+#button_four:checked ~ .slider > #img_four,
+#button_five:checked ~ .slider > #img_five {
+  display: block;
+  animation-name: slide-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#button_one:checked ~ .slider-buttons-text > .slider-text > #buttons_one,
+#button_two:checked ~ .slider-buttons-text > .slider-text > #buttons_two,
+#button_three:checked ~ .slider-buttons-text > .slider-text > #buttons_three,
+#button_four:checked ~ .slider-buttons-text > .slider-text > #buttons_four,
+#button_five:checked ~ .slider-buttons-text > .slider-text > #buttons_five {
+ animation: text-animation 0.5s ease-in-out 0.3s 1 normal forwards;
+}
